@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Quiz Code - CYBERHUB</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="enter-code-body">
+
+    <h1 class="standalone-logo"><a href="../index.html">CYBERHUB</a></h1>
+
+    <div class="form-container code-form">
+        <h1>Join a Quiz Session</h1>
+        <p>Enter the 6-digit code to begin.</p>
+        <form id="code-form">
+            <div class="code-input-container">
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+            </div>
+            <button type="submit" class="btn btn-full-width" disabled>Join</button>
+        </form>
+    </div>
+
+    <script>
+        const codeInputs = document.querySelectorAll('.code-input');
+        const submitButton = document.querySelector('#code-form button');
+
+        if (codeInputs.length > 0) {
+            codeInputs[0].focus();
+
+            const checkAllInputs = () => {
+                let allFilled = true;
+                codeInputs.forEach(input => {
+                    if (input.value.length === 0) {
+                        allFilled = false;
+                    }
+                });
+                submitButton.disabled = !allFilled;
+            };
+
+            codeInputs.forEach((input, index) => {
+                input.addEventListener('input', () => {
+                    if (input.value.length === 1 && index < codeInputs.length - 1) {
+                        codeInputs[index + 1].focus();
+                    }
+                    checkAllInputs();
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                        codeInputs[index - 1].focus();
+                    }
+                });
+
+                input.addEventListener('paste', (e) => {
+                    e.preventDefault();
+                    const pasteData = (e.clipboardData || window.clipboardData).getData('text').trim();
+                    if (pasteData.length === codeInputs.length) {
+                        codeInputs.forEach((box, i) => {
+                            box.value = pasteData[i] || '';
+                        });
+                        codeInputs[codeInputs.length - 1].focus();
+                        checkAllInputs();
+                    }
+                });
+            });
+
+            checkAllInputs();
+        }
+    </script>
+</body>
+</html>

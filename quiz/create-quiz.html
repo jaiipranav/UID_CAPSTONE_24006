@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz - CYBERHUB</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">CYBERHUB</a></h1>
+            <nav class="nav">
+                <div class="nav-links">
+                    <div class="dropdown"><a href="../learn.html" class="nav-link">Learn</a><div class="dropdown-content dropdown-content--wide"><div class="dropdown-column"><h4>Core Threats</h4><a href="../learn/phishing-attacks.html">Phishing Attacks</a><a href="../learn/malware-threats.html">Malware Threats</a><a href="../learn/ransomware-attacks.html">Ransomware Attacks</a><a href="../learn/social-engineering.html">Social Engineering</a></div><div class="dropdown-column"><h4>Technical Security</h4><a href="../learn/password-security.html">Password Security</a><a href="../learn/network-security.html">Network Security</a><a href="../learn/data-breaches.html">Data Breaches</a><a href="../learn/cloud-security.html">Cloud Security</a></div><div class="dropdown-column"><h4>Advanced Topics</h4><a href="../learn/insider-threats.html">Insider Threats</a><a href="../learn/iot-security.html">IoT Security</a><a href="../learn/sql-injection.html">SQL Injection</a><a href="../learn/zero-day-exploits.html">Zero-Day Exploits</a></div><div class="dropdown-column featured"><h4>Featured</h4><a href="../learn/beginners-guide.html">Beginner's Guide</a><a href="../learn/top-10-security-tips.html">Top 10 Security Tips</a><a href="../learn/cybersecurity-news.html">Cybersecurity News</a></div></div></div>
+                    <div class="dropdown">
+                        <a href="enter-code.html" class="nav-link active">Quiz</a>
+                        <div class="dropdown-content">
+                            <a href="enter-code.html">Enter Code</a>
+                            <a href="create-quiz.html" class="subscribers-only">Create Quiz (Subscribers Only)</a>
+                        </div>
+                    </div>
+                    <a href="../about.html">About</a><a href="../Login/login.html">Login</a><a href="../Login/signup.html" class="s-btn">Signup</a>
+                </div>
+                <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-wrapper">
+            <h1>Create a New Quiz</h1>
+            <form id="quiz-builder-form">
+                <div class="form-group">
+                    <label for="quiz-title">Quiz Title</label>
+                    <input type="text" id="quiz-title" class="form-input" placeholder="e.g., Core Cybersecurity Threats" required>
+                </div>
+                <div class="form-group">
+                    <label for="quiz-description">Description</label>
+                    <textarea id="quiz-description" class="form-input" placeholder="A short description of your quiz."></textarea>
+                </div>
+
+                <div id="question-list">
+                    <div class="question-block">
+                        <div class="question-header">
+                            <h2>Question 1</h2>
+                            <button type="button" class="btn-remove-question">&times;</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="q1-text">Question Text</label>
+                            <textarea id="q1-text" class="form-input question-text" placeholder="What is phishing?" required></textarea>
+                        </div>
+                        <div class="answer-options">
+                            <label>Answer Options (Select the correct one)</label>
+                            <div class="answer-option"><input type="radio" name="q1-correct" required><input type="text" class="form-input" placeholder="Option A" required></div>
+                            <div class="answer-option"><input type="radio" name="q1-correct" required><input type="text" class="form-input" placeholder="Option B" required></div>
+                            <div class="answer-option"><input type="radio" name="q1-correct" required><input type="text" class="form-input" placeholder="Option C" required></div>
+                            <div class="answer-option"><input type="radio" name="q1-correct" required><input type="text" class="form-input" placeholder="Option D" required></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button type="button" id="add-question-btn" class="btn accent">Add Question</button>
+                    <button type="submit" class="btn">Save Quiz</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column"><h3 class="footer-logo">CYBERHUB</h3><p>Your Cybersecurity Companion.</p></div>
+            <div class="footer-column"><h4>Navigate</h4><a href="../learn.html">Learn</a><a href="enter-code.html">Quiz</a><a href="../about.html">About</a></div>
+            <div class="footer-column"><h4>Legal</h4><a href="../legal/privacy-policy.html">Privacy Policy</a><a href="../legal/terms-of-service.html">Terms of Service</a><a href="../legal/contact-us.html">Contact Us</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 CYBERHUB. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        const questionList = document.getElementById('question-list');
+        const addQuestionBtn = document.getElementById('add-question-btn');
+        let questionCounter = 1;
+
+        const updateQuestionNumbers = () => {
+            const allQuestions = document.querySelectorAll('.question-block');
+            allQuestions.forEach((question, index) => {
+                question.querySelector('h2').textContent = `Question ${index + 1}`;
+            });
+        };
+
+        const createQuestionBlock = () => {
+            questionCounter++;
+            const newBlock = document.createElement('div');
+            newBlock.className = 'question-block';
+            newBlock.innerHTML = `
+                <div class="question-header">
+                    <h2>Question ${questionCounter}</h2>
+                    <button type="button" class="btn-remove-question">&times;</button>
+                </div>
+                <div class="form-group">
+                    <label for="q${questionCounter}-text">Question Text</label>
+                    <textarea id="q${questionCounter}-text" class="form-input question-text" placeholder="Enter your question" required></textarea>
+                </div>
+                <div class="answer-options">
+                    <label>Answer Options (Select the correct one)</label>
+                    <div class="answer-option"><input type="radio" name="q${questionCounter}-correct" required><input type="text" class="form-input" placeholder="Option A" required></div>
+                    <div class="answer-option"><input type="radio" name="q${questionCounter}-correct" required><input type="text" class="form-input" placeholder="Option B" required></div>
+                    <div class="answer-option"><input type="radio" name="q${questionCounter}-correct" required><input type="text" class="form-input" placeholder="Option C" required></div>
+                    <div class="answer-option"><input type="radio" name="q${questionCounter}-correct" required><input type="text" class="form-input" placeholder="Option D" required></div>
+                </div>
+            `;
+            return newBlock;
+        };
+
+        if (addQuestionBtn && questionList) {
+            addQuestionBtn.addEventListener('click', () => {
+                const newQuestion = createQuestionBlock();
+                questionList.appendChild(newQuestion);
+                updateQuestionNumbers();
+            });
+
+            questionList.addEventListener('click', (e) => {
+                if (e.target && e.target.classList.contains('btn-remove-question')) {
+                    if (document.querySelectorAll('.question-block').length > 1) {
+                        e.target.closest('.question-block').remove();
+                        questionCounter--;
+                        updateQuestionNumbers();
+                    } else {
+                        alert("You must have at least one question.");
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

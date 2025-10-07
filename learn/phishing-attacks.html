@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Phishing? - CYBERHUB</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">CYBERHUB</a></h1>
+            <nav class="nav">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">Learn</a>
+                        <div class="dropdown-content dropdown-content--wide">
+                            <div class="dropdown-column"><h4>Core Threats</h4><a href="phishing-attacks.html">Phishing Attacks</a><a href="malware-threats.html">Malware Threats</a><a href="ransomware-attacks.html">Ransomware Attacks</a><a href="social-engineering.html">Social Engineering</a></div>
+                            <div class="dropdown-column"><h4>Technical Security</h4><a href="password-security.html">Password Security</a><a href="network-security.html">Network Security</a><a href="data-breaches.html">Data Breaches</a><a href="cloud-security.html">Cloud Security</a></div>
+                            <div class="dropdown-column"><h4>Advanced Topics</h4><a href="insider-threats.html">Insider Threats</a><a href="iot-security.html">IoT Security</a><a href="sql-injection.html">SQL Injection</a><a href="zero-day-exploits.html">Zero-Day Exploits</a></div>
+                            <div class="dropdown-column featured"><h4>Featured</h4><a href="#">Beginner's Guide</a><a href="#">Top 10 Security Tips</a><a href="#">Cybersecurity News</a></div>
+                        </div>
+                    </div>
+                    <div class="dropdown"><a href="#" class="nav-link">Quiz</a><div class="dropdown-content"><a href="#">Enter Code</a><a href="#" class="subscribers-only">Create Quiz (Subscribers Only)</a></div></div>
+                    <a href="../about.html">About</a><a href="../Login/login.html">Login</a><a href="../Login/signup.html" class="s-btn">Signup</a>
+                </div>
+                <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="page-layout">
+            <div class="sidebar">
+                <h3>Core Threats</h3>
+                <a href="phishing-attacks.html" class="sidebar-link active">Phishing Attacks</a>
+                <a href="malware-threats.html" class="sidebar-link">Malware Threats</a>
+                <a href="ransomware-attacks.html" class="sidebar-link">Ransomware Attacks</a>
+                <a href="social-engineering.html" class="sidebar-link">Social Engineering</a>
+                <h3>Technical Security</h3>
+                <a href="password-security.html" class="sidebar-link">Password Security</a>
+                <a href="network-security.html" class="sidebar-link">Network Security</a>
+                <a href="data-breaches.html" class="sidebar-link">Data Breaches</a>
+                <a href="cloud-security.html" class="sidebar-link">Cloud Security</a>
+                <h3>Advanced Topics</h3>
+                <a href="insider-threats.html" class="sidebar-link">Insider Threats</a>
+                <a href="iot-security.html" class="sidebar-link">IoT Security</a>
+                <a href="sql-injection.html" class="sidebar-link">SQL Injection</a>
+                <a href="zero-day-exploits.html" class="sidebar-link">Zero-Day Exploits</a>
+            </div>
+            <div class="content-area">
+                <h1>Phishing Attacks</h1>
+                <p>Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message.</p>
+                <h2>How Phishing Works</h2>
+                <p>The attacker sends a fraudulent message designed to trick a human victim into revealing sensitive information or to deploy malicious software on the victim's infrastructure like ransomware. The message appears to be from a legitimate source, such as a well-known company or a trusted individual.</p>
+                <h2>Common Types of Phishing</h2>
+                <ul>
+                    <li><strong>Email Phishing:</strong> The most common type, where attackers send thousands of fraudulent emails to random users.</li>
+                    <li><strong>Spear Phishing:</strong> A more targeted attack aimed at a specific individual or organization.</li>
+                    <li><strong>Smishing (SMS Phishing):</strong> Phishing attacks conducted via text messages (SMS).</li>
+                    <li><strong>Vishing (Voice Phishing):</strong> Phishing attacks conducted over the phone.</li>
+                </ul>
+                <div class="summary-box">
+                    <h3>How to Spot a Phishing Attempt</h3>
+                    <ul>
+                        <li>Look for poor spelling and grammar.</li>
+                        <li>Check the sender's email address to ensure it's legitimate.</li>
+                        <li>Hover over links before clicking to see the actual URL.</li>
+                        <li>Be wary of urgent or threatening language.</li>
+                        <li>Never provide personal information in response to an unsolicited email.</li>
+                    </ul>
+                </div>
+                <div class="page-navigation">
+                    <a href="malware-threats.html" class="nav-button next">
+                        <span>Next &rarr;</span>
+                        <strong>Malware Threats</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column"><h3 class="footer-logo">CYBERHUB</h3><p>Your Cybersecurity Companion.</p></div>
+            <div class="footer-column"><h4>Navigate</h4><a href="#">Learn</a><a href="#">Quiz</a><a href="#">About</a></div>
+            <div class="footer-column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 CYBERHUB. All Rights Reserved.</p></div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

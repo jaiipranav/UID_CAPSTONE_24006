@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Security - CYBERHUB</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">CYBERHUB</a></h1>
+            <nav class="nav">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">Learn</a>
+                        <div class="dropdown-content dropdown-content--wide">
+                            <div class="dropdown-column"><h4>Core Threats</h4><a href="phishing-attacks.html">Phishing Attacks</a><a href="malware-threats.html">Malware Threats</a><a href="ransomware-attacks.html">Ransomware Attacks</a><a href="social-engineering.html">Social Engineering</a></div>
+                            <div class="dropdown-column"><h4>Technical Security</h4><a href="password-security.html">Password Security</a><a href="network-security.html">Network Security</a><a href="data-breaches.html">Data Breaches</a><a href="cloud-security.html">Cloud Security</a></div>
+                            <div class="dropdown-column"><h4>Advanced Topics</h4><a href="insider-threats.html">Insider Threats</a><a href="iot-security.html">IoT Security</a><a href="sql-injection.html">SQL Injection</a><a href="zero-day-exploits.html">Zero-Day Exploits</a></div>
+                            <div class="dropdown-column featured"><h4>Featured</h4><a href="beginners-guide.html">Beginner's Guide</a><a href="top-10-security-tips.html">Top 10 Security Tips</a><a href="cybersecurity-news.html">Cybersecurity News</a></div>
+                        </div>
+                    </div>
+                    <div class="dropdown"><a href="#" class="nav-link">Quiz</a><div class="dropdown-content"><a href="#">Enter Code</a><a href="#" class="subscribers-only">Create Quiz (Subscribers Only)</a></div></div>
+                    <a href="../about.html">About</a><a href="../Login/login.html">Login</a><a href="../Login/signup.html" class="s-btn">Signup</a>
+                </div>
+                <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="page-layout">
+            <div class="sidebar">
+                <h3>Core Threats</h3>
+                <a href="phishing-attacks.html" class="sidebar-link">Phishing Attacks</a>
+                <a href="malware-threats.html" class="sidebar-link">Malware Threats</a>
+                <a href="ransomware-attacks.html" class="sidebar-link">Ransomware Attacks</a>
+                <a href="social-engineering.html" class="sidebar-link">Social Engineering</a>
+                <h3>Technical Security</h3>
+                <a href="password-security.html" class="sidebar-link">Password Security</a>
+                <a href="network-security.html" class="sidebar-link">Network Security</a>
+                <a href="data-breaches.html" class="sidebar-link">Data Breaches</a>
+                <a href="cloud-security.html" class="sidebar-link">Cloud Security</a>
+                <h3>Advanced Topics</h3>
+                <a href="insider-threats.html" class="sidebar-link">Insider Threats</a>
+                <a href="iot-security.html" class="sidebar-link active">IoT Security</a>
+                <a href="sql-injection.html" class="sidebar-link">SQL Injection</a>
+                <a href="zero-day-exploits.html" class="sidebar-link">Zero-Day Exploits</a>
+            </div>
+            <div class="content-area">
+                <h1>IoT Security</h1>
+                <p>Internet of Things (IoT) security is the practice of protecting internet-connected devices and the networks they're connected to from threats and breaches. IoT devices include everything from smart home appliances and wearables to industrial sensors and medical devices.</p>
+                <h2>Common IoT Vulnerabilities</h2>
+                <p>Many IoT devices are not designed with security as a priority, leading to common weaknesses.</p>
+                <ul>
+                    <li><strong>Weak or Default Passwords:</strong> Many devices ship with simple, default credentials that users never change.</li>
+                    <li><strong>Lack of Updates:</strong> Manufacturers often fail to provide regular security patches for their devices, leaving known vulnerabilities unpatched.</li>
+                    <li><strong>Insecure Network Services:</strong> Open ports and insecure services on the device can be easily exploited.</li>
+                    <li><strong>Unencrypted Data:</strong> Sensitive data is often transmitted and stored without proper encryption.</li>
+                </ul>
+                <div class="summary-box">
+                    <h3>How to Secure IoT Devices</h3>
+                    <ul>
+                        <li>Always change the default username and password immediately upon setup.</li>
+                        <li>Keep device firmware and software updated. Disable features you do not use.</li>
+                        <li>Place IoT devices on a separate Wi-Fi network (a guest network) to isolate them from your primary computers and phones.</li>
+                        <li>Research a device's security features and manufacturer's reputation before purchasing.</li>
+                    </ul>
+                </div>
+                <div class="page-navigation">
+                    <a href="insider-threats.html" class="nav-button prev">
+                        <span>&larr; Previous</span>
+                        <strong>Insider Threats</strong>
+                    </a>
+                    <a href="sql-injection.html" class="nav-button next">
+                        <span>Next &rarr;</span>
+                        <strong>SQL Injection</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column"><h3 class="footer-logo">CYBERHUB</h3><p>Your Cybersecurity Companion.</p></div>
+            <div class="footer-column"><h4>Navigate</h4><a href="#">Learn</a><a href="#">Quiz</a><a href="#">About</a></div>
+            <div class="footer-column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 CYBERHUB. All Rights Reserved.</p></div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

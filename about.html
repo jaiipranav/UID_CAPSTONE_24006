@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CYBERHUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">CYBERHUB</a></h1>
+            <nav class="nav">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">Learn</a>
+                        <div class="dropdown-content dropdown-content--wide">
+                            <div class="dropdown-column"><h4>Core Threats</h4><a href="learn/phishing-attacks.html">Phishing Attacks</a><a href="learn/malware-threats.html">Malware Threats</a><a href="learn/ransomware-attacks.html">Ransomware Attacks</a><a href="learn/social-engineering.html">Social Engineering</a></div>
+                            <div class="dropdown-column"><h4>Technical Security</h4><a href="learn/password-security.html">Password Security</a><a href="learn/network-security.html">Network Security</a><a href="learn/data-breaches.html">Data Breaches</a><a href="learn/cloud-security.html">Cloud Security</a></div>
+                            <div class="dropdown-column"><h4>Advanced Topics</h4><a href="learn/insider-threats.html">Insider Threats</a><a href="learn/iot-security.html">IoT Security</a><a href="learn/sql-injection.html">SQL Injection</a><a href="learn/zero-day-exploits.html">Zero-Day Exploits</a></div>
+                            <div class="dropdown-column featured"><h4>Featured</h4><a href="learn/beginners-guide.html">Beginner's Guide</a><a href="learn/top-10-security-tips.html">Top 10 Security Tips</a><a href="learn/cybersecurity-news.html">Cybersecurity News</a></div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link">Quiz</a>
+                        <div class="dropdown-content">
+                            <a href="quiz/enter-code.html">Enter Code</a>
+                            <a href="#" class="subscribers-only">Create Quiz (Subscribers Only)</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="active">About</a>
+                    <a href="Login/login.html">Login</a>
+                    <a href="Login/signup.html" class="s-btn">Signup</a>
+                </div>
+                <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-wrapper">
+            <h1>About CYBERHUB</h1>
+            <p>In an increasingly digital world, understanding cybersecurity is no longer optional—it's essential. CYBERHUB was founded on the principle that everyone deserves access to clear, concise, and practical knowledge to protect their digital lives.</p>
+            
+            <h2>Our Mission</h2>
+            <p>Our mission is to demystify cybersecurity. We aim to break down complex topics into easy-to-understand learning modules and interactive quizzes. Whether you're an individual looking to secure your personal data, a student just starting out, or a professional needing a quick refresher, CYBERHUB is your trusted companion on the journey to digital safety.</p>
+
+            <h2>What We Offer</h2>
+            <p>Our platform is built around a comprehensive curriculum covering the most critical areas of cybersecurity today:</p>
+            <ul>
+                <li><strong>Core Threats:</strong> Understand the fundamentals of common attacks like phishing, malware, and ransomware.</li>
+                <li><strong>Technical Security:</strong> Dive into essential practices for securing passwords, networks, and data.</li>
+                <li><strong>Advanced Topics:</strong> Explore complex challenges such as insider threats, IoT security, and zero-day exploits.</li>
+            </ul>
+
+            <div class="summary-box">
+                <h3>Our Philosophy</h3>
+                <p>We believe that knowledge is the best defense. By fostering a community of informed and vigilant users, we can collectively create a safer digital environment for everyone. Join us in our mission to make the digital world a more secure place.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column"><h3 class="footer-logo">CYBERHUB</h3><p>Your Cybersecurity Companion.</p></div>
+            <div class="footer-column"><h4>Navigate</h4><a href="#">Learn</a><a href="#">Quiz</a><a href="#">About</a></div>
+            <div class="footer-column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 CYBERHUB. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

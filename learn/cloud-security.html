@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Security - CYBERHUB</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">CYBERHUB</a></h1>
+            <nav class="nav">
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">Learn</a>
+                        <div class="dropdown-content dropdown-content--wide">
+                            <div class="dropdown-column"><h4>Core Threats</h4><a href="phishing-attacks.html">Phishing Attacks</a><a href="malware-threats.html">Malware Threats</a><a href="ransomware-attacks.html">Ransomware Attacks</a><a href="social-engineering.html">Social Engineering</a></div>
+                            <div class="dropdown-column"><h4>Technical Security</h4><a href="password-security.html">Password Security</a><a href="network-security.html">Network Security</a><a href="data-breaches.html">Data Breaches</a><a href="cloud-security.html">Cloud Security</a></div>
+                            <div class="dropdown-column"><h4>Advanced Topics</h4><a href="insider-threats.html">Insider Threats</a><a href="iot-security.html">IoT Security</a><a href="sql-injection.html">SQL Injection</a><a href="zero-day-exploits.html">Zero-Day Exploits</a></div>
+                            <div class="dropdown-column featured"><h4>Featured</h4><a href="beginners-guide.html">Beginner's Guide</a><a href="top-10-security-tips.html">Top 10 Security Tips</a><a href="cybersecurity-news.html">Cybersecurity News</a></div>
+                        </div>
+                    </div>
+                    <div class="dropdown"><a href="#" class="nav-link">Quiz</a><div class="dropdown-content"><a href="../quiz/enter-code.html">Enter Code</a><a href="#" class="subscribers-only">Create Quiz (Subscribers Only)</a></div></div>
+                    <a href="../about.html">About</a><a href="../Login/login.html">Login</a><a href="../Login/signup.html" class="s-btn">Signup</a>
+                </div>
+                <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="page-layout">
+            <div class="sidebar">
+                <h3>Core Threats</h3>
+                <a href="phishing-attacks.html" class="sidebar-link">Phishing Attacks</a>
+                <a href="malware-threats.html" class="sidebar-link">Malware Threats</a>
+                <a href="ransomware-attacks.html" class="sidebar-link">Ransomware Attacks</a>
+                <a href="social-engineering.html" class="sidebar-link">Social Engineering</a>
+                <h3>Technical Security</h3>
+                <a href="password-security.html" class="sidebar-link">Password Security</a>
+                <a href="network-security.html" class="sidebar-link">Network Security</a>
+                <a href="data-breaches.html" class="sidebar-link">Data Breaches</a>
+                <a href="cloud-security.html" class="sidebar-link active">Cloud Security</a>
+                <h3>Advanced Topics</h3>
+                <a href="insider-threats.html" class="sidebar-link">Insider Threats</a>
+                <a href="iot-security.html" class="sidebar-link">IoT Security</a>
+                <a href="sql-injection.html" class="sidebar-link">SQL Injection</a>
+                <a href="zero-day-exploits.html" class="sidebar-link">Zero-Day Exploits</a>
+            </div>
+            <div class="content-area">
+                <h1>Cloud Security</h1>
+                <p>Cloud security refers to the broad set of policies, technologies, applications, and controls utilized to protect virtualized IP, data, applications, services, and the associated infrastructure of cloud computing.</p>
+                <h2>The Shared Responsibility Model</h2>
+                <p>A fundamental concept in cloud security is the "shared responsibility model." The cloud provider (like Amazon Web Services or Microsoft Azure) is responsible for the security *of* the cloud, while the customer is responsible for security *in* the cloud.</p>
+                <ul>
+                    <li><strong>Provider's Responsibility:</strong> Protecting the physical data centers, servers, and core network infrastructure.</li>
+                    <li><strong>Customer's Responsibility:</strong> Securing their data, managing user access (IAM), configuring firewalls and networks, and securing their applications.</li>
+                </ul>
+                <div class="summary-box">
+                    <h3>Core Pillars of Cloud Security</h3>
+                    <ul>
+                        <li><strong>Identity and Access Management (IAM):</strong> Strictly controlling who can access what resources.</li>
+                        <li><strong>Data Protection:</strong> Encrypting data at rest and in transit.</li>
+                        <li><strong>Visibility and Monitoring:</strong> Continuously monitoring the cloud environment for misconfigurations and threats.</li>
+                        <li><strong>Configuration Management:</strong> Ensuring all cloud services are configured securely and avoiding common mistakes.</li>
+                    </ul>
+                </div>
+                <div class="page-navigation">
+                    <a href="data-breaches.html" class="nav-button prev">
+                        <span>&larr; Previous</span>
+                        <strong>Data Breaches</strong>
+                    </a>
+                    <a href="insider-threats.html" class="nav-button next">
+                        <span>Next &rarr;</span>
+                        <strong>Insider Threats</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column"><h3 class="footer-logo">CYBERHUB</h3><p>Your Cybersecurity Companion.</p></div>
+            <div class="footer-column"><h4>Navigate</h4><a href="#">Learn</a><a href="#">Quiz</a><a href="#">About</a></div>
+            <div class="footer-column"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Contact Us</a></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 CYBERHUB. All Rights Reserved.</p></div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
